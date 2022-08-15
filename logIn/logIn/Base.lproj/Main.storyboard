@@ -33,6 +33,9 @@
                                 <state key="normal" title="forgot user name?">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotUserName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kze-6N-gct"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNN-3N-XCk">
                                 <rect key="frame" x="191" y="407" width="183" height="28"/>
@@ -41,6 +44,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="forgot user password?">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotUserPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xzv-WO-umL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY3-xN-2Jw">
                                 <rect key="frame" x="111" y="328" width="169" height="31"/>

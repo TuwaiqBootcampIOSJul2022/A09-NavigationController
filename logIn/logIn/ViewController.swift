@@ -22,6 +22,15 @@ class ViewController: UIViewController {
     @IBAction func logInUser(_ sender: Any) {
         performSegue(withIdentifier:  "ForgottenUsernameOrPassword", sender: sender)
     }
+    
+    @IBAction func forgotUserPassword(_ sender: Any) {
+        performSegue(withIdentifier:  "ForgottenUsernameOrPassword", sender: sender)
+    }
+    
+    @IBAction func forgotUserName(_ sender: Any) {
+        performSegue(withIdentifier:  "ForgottenUsernameOrPassword", sender: sender)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        
         guard let sender = sender as? UIButton else {return}
