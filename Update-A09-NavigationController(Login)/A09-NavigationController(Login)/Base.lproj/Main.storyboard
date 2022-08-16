@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uiw-hw-fdY">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController title="Login" id="BYZ-38-t0r" customClass="LoginScreen_ViewController" customModule="A09_NavigationController_Login_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5D-u6-Pfd">
-                                <rect key="frame" x="20" y="473" width="188" height="49"/>
+                                <rect key="frame" x="20" y="473" width="177" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98871905879999999" green="0.9569670267" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -24,11 +24,10 @@
                                 <buttonConfiguration key="configuration" style="plain" title="نسيت كلمة المرور؟"/>
                                 <connections>
                                     <action selector="PasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHE-Sq-3Nj"/>
-                                    <segue destination="ZnY-B5-qxw" kind="show" identifier="ForgottenUsernameOrPassword" id="zsq-Hf-qph"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="109-qM-Vc7">
-                                <rect key="frame" x="216" y="473" width="178" height="49"/>
+                                <rect key="frame" x="216" y="473" width="158" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98871905879999999" green="0.9569670267" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,7 +35,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="نسيت اسم المستخدم؟"/>
                                 <connections>
                                     <action selector="UsernameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="33C-fH-VDt"/>
-                                    <segue destination="ZnY-B5-qxw" kind="show" identifier="ForgottenUsernameOrPassword" id="qDu-2k-3b7"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" text="اسم المستخدم" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGE-9d-elG">
@@ -73,20 +71,23 @@
                         <barButtonItem key="backBarButtonItem" title="Login Screen" id="Kqf-mg-iY1"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="forgotPasswordButton" destination="c5D-u6-Pfd" id="5wk-La-GMc"/>
+                        <outlet property="forgotUserNameButton" destination="109-qM-Vc7" id="thH-Vq-pHt"/>
                         <outlet property="text1" destination="aGE-9d-elG" id="WX2-X0-cbG"/>
                         <outlet property="text2" destination="TWK-qf-gPo" id="JBM-6v-d4m"/>
+                        <segue destination="ZnY-B5-qxw" kind="show" identifier="ForgottenUsernameOrPassword" id="hwm-lh-jkj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847.82608695652175" y="69.642857142857139"/>
+            <point key="canvasLocation" x="847.69230769230762" y="68.957345971563981"/>
         </scene>
         <!--Landing Screen-->
         <scene sceneID="yMe-68-0iw">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="ZnY-B5-qxw" customClass="LandingScreen_ViewController" customModule="A09_NavigationController_Login_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zfV-5D-a0v">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdF-J1-f1J">
@@ -116,7 +117,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uiw-hw-fdY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZYW-5R-9SA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -130,6 +131,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qDu-2k-3b7"/>
+        <segue reference="hwm-lh-jkj"/>
     </inferredMetricsTieBreakers>
 </document>
